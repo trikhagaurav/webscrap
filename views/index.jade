@@ -1,22 +1,75 @@
 extends layout
-
 block content
-
-  h1 #{siteName}!
-  
-  h3 Categories
-  ul
-    each val in categories
-      li= val
-  h3 Positions
-  ul
-    each val in positions
-      li= val
-  h3 Locations
-  ul
-    each val in locations
-      li= val
-  h3 Tags
-  ul
-    each val in tags
-      li= val
+ h2 Class 10 books
+ br
+ h2 Maths
+ br 
+ h3 Chapters in English
+ h4
+  each val in allSubjects
+   if val.name == "Maths"
+    p
+    | #{val.engch} &nbsp 
+    a(href=val.englk) #{val.englk} 
+ br
+ h3 Chapters in Hindi
+ h4
+  each val in allSubjects
+   if val.name == "Maths"
+    p
+    | #{val.hindich} &nbsp
+    a(href=val.hindilk) #{val.hindilk}
+ br
+ h2 Science
+ h3 Chapters in English
+ h4
+  each val in allSubjects
+   if val.name == "Science"
+    p
+    | #{val.engch} &nbsp 
+    a(href=val.englk) #{val.englk}
+ br
+ h3 Chapters in Hindi
+ h4
+  each val in allSubjects
+   if val.name == "Science"
+    p
+    | #{val.hindich} &nbsp
+    a(href=val.hindilk) #{val.hindilk}
+ br
+ h2 Social science
+ h3 Chapters in English
+ h4
+  each val in allSubjects
+   if val.name == "Social Science"
+    p
+    | #{val.engch} &nbsp 
+    a(href=val.englk) #{val.englk}
+ br
+ h3 Chapters in Hindi
+ h4
+  each val in allSubjects
+   if val.name == "Social Science"
+    p
+    | #{val.hindich} &nbsp
+    a(href=val.hindilk) #{val.hindilk}
+ br
+ h2 Hindi
+ br
+ h3 Chapters-
+ h4
+  each val in allSubjects
+   if val.name == "Hindi"
+     p
+     | #{val.hindich} &nbsp
+     a(href=val.hindilk) #{val.hindilk}
+ br
+ h2 English
+ br
+ h3 Chapters-
+ h4
+  each val in allSubjects
+   if val.name == "English"
+    p
+    | #{val.engch} &nbsp
+    a(href=val.englk) #{val.englk}
